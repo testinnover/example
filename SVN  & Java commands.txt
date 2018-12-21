@@ -1,0 +1,87 @@
+
+******SVN Server setup commnads*********
+
+
+Create Repo
+
+sudo svnadmin create /var/lib/svn/hrm
+
+
+Add in group 
+
+sudo chown -R www-data:www-data /var/lib/svn/hrm
+
+
+Permission set
+
+chmod 775 hrm
+
+
+Add user in svn
+
+
+/var/lib/svn# sudo htpasswd -m /etc/apache2/dav_svn.passwd shailesh.prabhudesai@innoversystems.com
+
+
+
+SVN IOS
+
+
+
+http://192.168.1.74/svn/mydemo/branches/shailesh
+
+
+
+****SVN Commands****
+
+svn update
+
+svn commit -m "yourmessage"
+
+svn merge 
+
+svn co (checkout) 
+
+svn delete --force *
+
+svn add --force *
+
+
+
+
+
+*****Java Build upload commnads******
+
+
+Run build commamds
+
+
+upload build via winscp
+
+
+login to putty 
+
+username : ubuntu
+
+go to /home/ubuntu/Dev
+
+
+netstat -nlp|grep 8080
+
+kill -9 (proccess id)
+
+nohup java -jar wecast-0.0.1-SNAPSHOT.jar &
+
+(Click enter 2 times)
+
+cat nohup.out
+
+
+
+
+
+
+
+
+
+
